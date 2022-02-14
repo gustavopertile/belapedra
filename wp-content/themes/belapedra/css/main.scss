@@ -1,0 +1,144 @@
+@font-face {
+	font-family: Big John;
+	src: url('/wp-content/themes/belapedra/assets/fonts/BIGJOHN.otf');
+	font-family: Slim Joe;
+	src: url('/wp-content/themes/belapedra/assets/fonts/SlimJoe.otf');
+}
+
+* {
+	font-family: 'Ubuntu';
+	font-weight: 300;
+}
+
+header {
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.9458158263305322) 6%,
+		rgba(0, 0, 0, 0.7021183473389356) 21%,
+		rgba(0, 0, 0, 0.39399509803921573) 73%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	width: 100%;
+	height: 118px;
+	position: absolute;
+	top: 0;
+	.top-bar {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		li {
+			a {
+				font-size: 14px;
+				padding: 20px;
+				color: #fdd79f;
+				letter-spacing: 1px;
+				line-height: 29px;
+				text-align: center;
+			}
+		}
+	}
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		margin-top: 30px;
+		.logo-header h3 {
+			margin-top: 10px;
+			font-size: 10px;
+			color: #ffffff;
+			font-family: 'Slim Joe';
+			text-align: center;
+		}
+
+		.bandeiras {
+			display: flex;
+			width: 24px;
+			height: 16px;
+			position: absolute;
+			top: 0;
+			margin-left: 750px;
+		}
+	}
+}
+
+.local_bela_pedra {
+	width: 100vw;
+	height: auto;
+	z-index: 0;
+	display: block;
+}
+
+.abelapedra-conteudo {
+	margin: 0 3rem;
+	text-align: justify;
+}
+
+footer {
+	background: #f2efe9;
+	height: 419px;
+	width: 100%;
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 25px;
+	color: #3f3f3f;
+	font-weight: 300;
+	bottom: 0;
+	.footer-menu {
+		li {
+			a {
+				padding: 20px;
+				color: #3f3f3f;
+			}
+		}
+	}
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer-informacoes {
+	list-style-type: none;
+	margin-top: 68px;
+	height: 100%;
+}
+
+.footer-menu {
+	display: flex;
+	margin-top: 68px;
+	font-size: 14px;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+.footer-direita {
+	p {
+		font-size: 12px;
+		margin-right: 50px;
+	}
+}
+
+.footer-extras {
+	margin-top: 40px;
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 24px;
+	img {
+		display: inline-block;
+		width: 24px;
+		height: 16px;
+		margin-left: 10px;
+	}
+}
+
+.astrus-logo {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 24px;
+	margin-top: 50px;
+}

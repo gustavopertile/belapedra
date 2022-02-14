@@ -1,22 +1,30 @@
-<?php get_header();?>
+<?php get_header();
+
+/* Template Name: A Bela Pedra página */
+?>
 
 
-<section class="page">
-    <div class="container">
+<?php if (have_posts()) : ?>
+    <main id="page-abelapedra">
+        <?php
+        while (have_posts()) : the_post();
+            the_post_thumbnail('post-thumbnail', array('class' => 'local_bela_pedra'));
 
+            echo '<div class="abelapedra-conteudo">';
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_title('<h2>', '</h2>');
+            the_content();
+            echo '</div>';
+        endwhile; ?>
+    </main>
+<?php
+endif;
 
-
-                <h1><?php the_title();?></h1>
-            
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-                <?php the_content(); ?>
-
-                <?php endwhile; else: endif; ?>
-
-
-
-    </div>
-</section>
-
-<?php get_footer();?>
+get_footer(); ?>
