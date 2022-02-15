@@ -24,9 +24,16 @@ header .top-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+header .top-bar li {
+  border-bottom: 0.5px #fdd79f solid;
+  padding-bottom: 20px;
+  position: relative;
 }
 
 header .top-bar li a {
@@ -36,6 +43,29 @@ header .top-bar li a {
   letter-spacing: 1px;
   line-height: 29px;
   text-align: center;
+}
+
+header .top-bar li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 3px;
+  display: block;
+  background: #fdd79f;
+  -webkit-transition: 350ms all ease;
+  transition: 350ms all ease;
+  width: 0;
+  right: 0;
+  margin: auto;
+}
+
+header .top-bar li a:hover:after {
+  width: 100%;
+}
+
+header .top-bar li a:hover {
+  text-decoration: none;
 }
 
 header .container {
@@ -49,38 +79,25 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  margin-top: 30px;
+  margin-top: 36px;
+}
+
+header .container .logo-header {
+  margin: 0 30px;
 }
 
 header .container .logo-header h3 {
   margin-top: 10px;
-  font-size: 10px;
+  font-size: 9px;
   color: #ffffff;
-  font-family: 'Slim Joe';
+  font-family: 'Big John';
   text-align: center;
 }
 
-header .container .bandeiras {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 24px;
-  height: 16px;
+header .bandeiras {
+  top: 5px;
   position: absolute;
-  top: 0;
-  margin-left: 750px;
-}
-
-.local_bela_pedra {
-  width: 100vw;
-  height: auto;
-  z-index: 0;
-  display: block;
-}
-
-.abelapedra-conteudo {
-  margin: 0 3rem;
-  text-align: justify;
+  right: 450px;
 }
 
 footer {
@@ -161,5 +178,212 @@ footer .footer-menu li a {
           justify-content: flex-end;
   margin-right: 24px;
   margin-top: 50px;
+}
+
+.local_bela_pedra {
+  width: 100vw;
+  height: auto;
+  z-index: 0;
+  display: block;
+}
+
+.abelapedra-conteudo {
+  color: #4a4a4a;
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  max-width: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 77px auto;
+}
+
+.abelapedra-conteudo h1 {
+  margin-bottom: 15px;
+  font-family: Bebas Neue;
+  color: #4f4e4d;
+  font-size: 45px;
+}
+
+.abelapedra-conteudo p {
+  margin-top: 20px;
+}
+
+.abelapedra-sustentabilidade {
+  background-image: url("/wp-content/themes/belapedra/assets/images/abelapedra-sustentabilidade.jpg");
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 470px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+.abelapedra-sustentabilidade h1 {
+  margin: 0 auto;
+  max-width: 715px;
+  margin-bottom: 15px;
+  font-family: Bebas Neue;
+  font-size: 45px;
+}
+
+.abelapedra-sustentabilidade p {
+  line-height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+.abelapedra-gestao {
+  color: #4a4a4a;
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.abelapedra-gestao .abelapedra-gestao-texto h1 {
+  margin: 0 auto;
+  max-width: 715px;
+  margin-bottom: 15px;
+  font-family: Bebas Neue;
+  font-size: 45px;
+  line-height: 55px;
+  color: #4f4e4d;
+}
+
+.abelapedra-gestao .abelapedra-gestao-texto p {
+  line-height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+.abelapedra-gestao-imagens {
+  margin: 20px auto;
+}
+
+.abelapedra-gestao-imagens ul {
+  margin-top: 20px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.abelapedra-gestao-imagens ul li {
+  margin: 10px 60px;
+  max-width: 190px;
+  height: 200px;
+}
+
+.abelapedra-gestao-imagens ul li img {
+  max-height: 100px;
+  height: 100%;
+}
+
+.abelapedra-gestao-imagens p {
+  font-size: 24px;
+  line-height: 50px;
+  color: #928d82;
+  font-family: 'Bebas Neue';
+  text-align: center;
+  position: relative;
+  margin: auto;
+}
+
+.abelapedra-gestao-imagens p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 2px;
+  display: block;
+  background: #928d82;
+  -webkit-transition: 350ms all ease;
+  transition: 350ms all ease;
+  width: 0;
+  right: 0;
+  margin: auto;
+}
+
+.abelapedra-gestao-imagens p:hover:after {
+  width: 100%;
+}
+
+.abelapedra-gestao-imagens .popup {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.abelapedra-gestao-imagens .popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.abelapedra-gestao-imagens .popup div div p {
+  color: #4a4a4a;
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  font-family: Ubuntu;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */

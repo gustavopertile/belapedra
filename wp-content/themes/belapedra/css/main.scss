@@ -10,6 +10,8 @@
 	font-weight: 300;
 }
 
+// HEADER
+
 header {
 	background: rgb(0, 0, 0);
 	background: linear-gradient(
@@ -27,8 +29,12 @@ header {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		padding-bottom: 30px;
 		display: flex;
 		li {
+			border-bottom: 0.5px #fdd79f solid;
+			padding-bottom: 20px;
+			position: relative;
 			a {
 				font-size: 14px;
 				padding: 20px;
@@ -36,6 +42,28 @@ header {
 				letter-spacing: 1px;
 				line-height: 29px;
 				text-align: center;
+
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 100%;
+					height: 3px;
+					display: block;
+					background: #fdd79f;
+					transition: 350ms all ease;
+					width: 0;
+					right: 0;
+					margin: auto;
+				}
+			}
+
+			a:hover:after {
+				width: 100%;
+			}
+
+			a:hover {
+				text-decoration: none;
 			}
 		}
 	}
@@ -44,37 +72,36 @@ header {
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		margin-top: 30px;
+		margin-top: 36px;
+		.logo-header {
+			margin: 0 30px;
+		}
 		.logo-header h3 {
 			margin-top: 10px;
-			font-size: 10px;
+			font-size: 9px;
 			color: #ffffff;
-			font-family: 'Slim Joe';
+			font-family: 'Big John';
 			text-align: center;
 		}
-
-		.bandeiras {
-			display: flex;
-			width: 24px;
-			height: 16px;
-			position: absolute;
-			top: 0;
-			margin-left: 750px;
-		}
+	}
+	.bandeiras {
+		top: 5px;
+		position: absolute;
+		right: 450px;
+		// display: flex;
+		// width: 24px;
+		// height: 16px;
+		// position: absolute;
+		// top: 0;
+		// margin-left: 750px;
+		// padding: 20px;
+		// img {
+		// 	margin-right: 20px;
+		// }
 	}
 }
 
-.local_bela_pedra {
-	width: 100vw;
-	height: auto;
-	z-index: 0;
-	display: block;
-}
-
-.abelapedra-conteudo {
-	margin: 0 3rem;
-	text-align: justify;
-}
+// FOOTER
 
 footer {
 	background: #f2efe9;
@@ -141,4 +168,168 @@ footer {
 	justify-content: flex-end;
 	margin-right: 24px;
 	margin-top: 50px;
+}
+
+// PAGE A BELAPEDRA
+
+.local_bela_pedra {
+	width: 100vw;
+	height: auto;
+	z-index: 0;
+	display: block;
+}
+
+.abelapedra-conteudo {
+	color: #4a4a4a;
+	font-weight: 400;
+	text-align: center;
+	font-size: 15px;
+	max-width: 680px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 77px auto;
+	h1 {
+		margin-bottom: 15px;
+		font-family: Bebas Neue;
+		color: #4f4e4d;
+		font-size: 45px;
+	}
+	p {
+		margin-top: 20px;
+	}
+}
+
+.abelapedra-sustentabilidade {
+	background-image: url('/wp-content/themes/belapedra/assets/images/abelapedra-sustentabilidade.jpg');
+	color: white;
+	font-weight: 400;
+	text-align: center;
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 470px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	h1 {
+		margin: 0 auto;
+		max-width: 715px;
+		margin-bottom: 15px;
+		font-family: Bebas Neue;
+		font-size: 45px;
+	}
+	p {
+		line-height: 30px;
+		margin: 0 auto;
+		margin-top: 20px;
+		max-width: 700px;
+	}
+}
+
+.abelapedra-gestao {
+	color: #4a4a4a;
+	font-weight: 400;
+	text-align: center;
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 70px;
+	margin-bottom: 20px;
+	position: relative;
+	.abelapedra-gestao-texto h1 {
+		margin: 0 auto;
+		max-width: 715px;
+		margin-bottom: 15px;
+		font-family: Bebas Neue;
+		font-size: 45px;
+		line-height: 55px;
+		color: #4f4e4d;
+	}
+	.abelapedra-gestao-texto p {
+		line-height: 30px;
+		margin: 0 auto;
+		margin-top: 20px;
+		max-width: 700px;
+	}
+}
+
+.abelapedra-gestao-imagens {
+	margin: 20px auto;
+	ul {
+		margin-top: 20px;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		align-items: baseline;
+		li {
+			margin: 10px 60px;
+			max-width: 190px;
+			height: 200px;
+			img {
+				max-height: 100px;
+				height: 100%;
+			}
+		}
+	}
+	p {
+		font-size: 24px;
+		line-height: 50px;
+		color: #928d82;
+		font-family: 'Bebas Neue';
+		text-align: center;
+		position: relative;
+		margin: auto;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 100%;
+			height: 2px;
+			display: block;
+			background: #928d82;
+			transition: 350ms all ease;
+			width: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+	p:hover:after {
+		width: 100%;
+	}
+
+	.popup {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(255, 255, 255, 0.8);
+		&.show {
+			opacity: 1;
+			visibility: visible;
+		}
+		div {
+			div {
+				p {
+					color: #4a4a4a;
+					font-weight: 400;
+					text-align: center;
+					font-size: 15px;
+					font-family: Ubuntu;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-top: 70px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
 }
