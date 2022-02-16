@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<section class="page">
+<section class="page" id="page-contato">
    <div class="container">
 
       <h1><?php the_title(); ?></h1>

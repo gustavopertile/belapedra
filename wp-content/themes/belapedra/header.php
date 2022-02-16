@@ -42,6 +42,6 @@
         </div>
         <div class="bandeiras">
             <img src="/wp-content/themes/belapedra/assets/images/bandeira_br.png" alt="PTBR">
-            <img src="/wp-content/themes/belapedra/assets/images/bandeira_usa.png" alt="US">
+            <img src="/wp-content/themes/belapedra/assets/images/bandeira_usa.png" alt="US" id="bandeira-us">
         </div>
     </header>

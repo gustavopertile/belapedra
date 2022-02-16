@@ -21,7 +21,7 @@
          <div class="footer-extras">
             <p>Acompanhe no Google Plus <img src="/wp-content/themes/belapedra/assets/images/google.png" alt="Google Plus"></p>
             <img src="/wp-content/themes/belapedra/assets/images/bandeira_br.png" alt="PTBR">
-            <img src="/wp-content/themes/belapedra/assets/images/bandeira_usa.png" alt="US">
+            <img src="/wp-content/themes/belapedra/assets/images/bandeira_usa.png" alt="US" id="bandeira-us">
          </div>
          <div class="astrus-logo">
             <img src="/wp-content/themes/belapedra/assets/images/astrus_logo.png" alt="Logo da Astrus">

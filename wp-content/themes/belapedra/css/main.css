@@ -10,6 +10,27 @@
   font-weight: 300;
 }
 
+header.branco {
+  position: inherit;
+  background: none;
+}
+
+header.branco .top-bar li {
+  border-bottom: 0.5px #746f69 solid;
+}
+
+header.branco .top-bar li a {
+  color: #746f69;
+}
+
+header.branco .top-bar li a::after {
+  background: #b8af9b;
+}
+
+header.branco .container .logo-header h3 {
+  color: #746f69;
+}
+
 header {
   background: black;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, rgba(0, 0, 0, 0.945816)), color-stop(21%, rgba(0, 0, 0, 0.702118)), color-stop(73%, rgba(0, 0, 0, 0.393995)), to(rgba(255, 255, 255, 0)));
@@ -100,6 +121,11 @@ header .bandeiras {
   right: 450px;
 }
 
+#bandeira-us {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 footer {
   background: #f2efe9;
   height: 419px;
@@ -128,7 +154,7 @@ footer .footer-menu li a::before {
   bottom: 0;
   right: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: #3f3f3f;
   -webkit-transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
