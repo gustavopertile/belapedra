@@ -95,7 +95,11 @@ header {
 		align-items: center;
 		height: 100%;
 		margin-top: 36px;
+		div {
+			min-width: 400px;
+		}
 		.logo-header {
+			min-width: auto;
 			margin: 0 30px;
 		}
 		.logo-header h3 {
@@ -110,16 +114,6 @@ header {
 		top: 5px;
 		position: absolute;
 		right: 450px;
-		// display: flex;
-		// width: 24px;
-		// height: 16px;
-		// position: absolute;
-		// top: 0;
-		// margin-left: 750px;
-		// padding: 20px;
-		// img {
-		// 	margin-right: 20px;
-		// }
 	}
 }
 
@@ -149,6 +143,7 @@ footer {
 			}
 
 			a:hover {
+				color: black;
 				text-decoration: none;
 			}
 
@@ -408,6 +403,85 @@ footer {
 					width: 0;
 				}
 			}
+		}
+	}
+}
+
+// PAGE CONTATO
+
+.titulo-contato {
+	color: #4a4a4a;
+	font-weight: 400;
+	text-align: center;
+	font-size: 15px;
+	max-width: 680px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 50px auto 20px;
+	h1 {
+		margin-bottom: 15px;
+		color: #4f4e4d;
+		font-family: 'Bebas Neue';
+		font-size: 45px;
+	}
+	p {
+		margin-top: 20px;
+	}
+}
+
+.formulario {
+	max-width: 350px;
+	margin: 0 auto;
+	font-family: Raleway;
+	font-size: 15px;
+	margin-bottom: 50px;
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		input {
+			border-radius: 50px;
+			border: 1px solid #4a4a4a;
+			padding: 20px;
+			margin-bottom: 15px;
+			height: 40px;
+			width: 100%;
+		}
+
+		input:focus,
+		#contato-mensagem:focus {
+			outline: 2px solid #f2efe9;
+			border: 2px solid #b8af9b;
+		}
+
+		#contato-mensagem {
+			height: 270px;
+			border-radius: 25px;
+			border: 1px solid #4a4a4a;
+			padding: 10px 20px;
+		}
+
+		#contato-submit {
+			font-weight: 500;
+			font-family: 'Raleway';
+			color: #4a4a4a;
+			height: 50px;
+			max-width: 100px;
+			width: 100%;
+			margin: 50px auto 0;
+			background: none;
+			border: none;
+			border-bottom: 5px solid #b8af9b;
+		}
+
+		#contato-submit:hover {
+			font-size: 107%;
+			background: #f2efe9;
+			border-bottom: 2px solid #b8af9b;
+			transition: 0.6s;
+			cursor: pointer;
 		}
 	}
 }

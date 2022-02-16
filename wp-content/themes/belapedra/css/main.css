@@ -103,7 +103,12 @@ header .container {
   margin-top: 36px;
 }
 
+header .container div {
+  min-width: 400px;
+}
+
 header .container .logo-header {
+  min-width: auto;
   margin: 0 30px;
 }
 
@@ -145,6 +150,7 @@ footer .footer-menu li a {
 }
 
 footer .footer-menu li a:hover {
+  color: black;
   text-decoration: none;
 }
 
@@ -463,5 +469,100 @@ footer .footer-menu li a::before {
 
 .abelapedra-gestao-imagens .popup div div p:hover:after {
   width: 0;
+}
+
+.titulo-contato {
+  color: #4a4a4a;
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  max-width: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto 20px;
+}
+
+.titulo-contato h1 {
+  margin-bottom: 15px;
+  color: #4f4e4d;
+  font-family: 'Bebas Neue';
+  font-size: 45px;
+}
+
+.titulo-contato p {
+  margin-top: 20px;
+}
+
+.formulario {
+  max-width: 350px;
+  margin: 0 auto;
+  font-family: Raleway;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+.formulario form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formulario form input {
+  border-radius: 50px;
+  border: 1px solid #4a4a4a;
+  padding: 20px;
+  margin-bottom: 15px;
+  height: 40px;
+  width: 100%;
+}
+
+.formulario form input:focus,
+.formulario form #contato-mensagem:focus {
+  outline: 2px solid #f2efe9;
+  border: 2px solid #b8af9b;
+}
+
+.formulario form #contato-mensagem {
+  height: 270px;
+  border-radius: 25px;
+  border: 1px solid #4a4a4a;
+  padding: 10px 20px;
+}
+
+.formulario form #contato-submit {
+  font-weight: 500;
+  font-family: 'Raleway';
+  color: #4a4a4a;
+  height: 50px;
+  max-width: 100px;
+  width: 100%;
+  margin: 50px auto 0;
+  background: none;
+  border: none;
+  border-bottom: 5px solid #b8af9b;
+}
+
+.formulario form #contato-submit:hover {
+  font-size: 107%;
+  background: #f2efe9;
+  border-bottom: 2px solid #b8af9b;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

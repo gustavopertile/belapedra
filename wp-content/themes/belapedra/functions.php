@@ -31,3 +31,27 @@ add_theme_support('post-thumbnails');
 // Image Sizes
 add_image_size('local_bela_pedra', 1800, 780, false);
 add_image_size('banners', 1800, 780, false);
+
+
+if (!function_exists('create_post_type')) {
+    function create_post_type()
+    {
+        register_post_type(
+            'Curriculos',
+            array(
+                'labels' => array(
+                    'name' => __('Currículos'),
+                    'singular_name' => __('Currículos'),
+                ),
+                'public' => true,
+                'supports' => array('title', 'custom-fields'),
+                'has_archive' => 'curriculos',
+                'hierarchical' => true,
+                'show_in_rest' => false,
+                'menu_icon' => "dashicons-id-alt",
+                'rewrite' => array('slug' => 'curriculos')
+            )
+        );
+    }
+    add_action('init', 'create_post_type');
+}
