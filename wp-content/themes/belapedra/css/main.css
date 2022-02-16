@@ -565,4 +565,10 @@ footer .footer-menu li a::before {
   transition: 0.6s;
   cursor: pointer;
 }
+
+.formulario form .captcha {
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

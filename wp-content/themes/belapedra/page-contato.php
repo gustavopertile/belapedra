@@ -1,6 +1,7 @@
 <?php get_header();
 $titulo = get_field('titulo');
 $descricao = get_field('descricao_titulo');
+$captcha = get_field('captcha');
 ?>
 
 
@@ -23,6 +24,9 @@ $descricao = get_field('descricao_titulo');
             <input type="text" id="contato-estado" placeholder="ESTADO">
             <input type="text" id="contato-cidade" placeholder="CIDADE">
             <textarea type="text" id="contato-mensagem" placeholder="MENSAGEM"></textarea>
+            <div class="captcha">
+               <?= $captcha ?>
+            </div>
             <button type="submit" id="contato-submit">ENVIAR</button>
          </form>
       </div>

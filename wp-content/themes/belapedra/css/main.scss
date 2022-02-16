@@ -483,5 +483,11 @@ footer {
 			transition: 0.6s;
 			cursor: pointer;
 		}
+
+		.captcha {
+			margin: 0 auto;
+			max-width: 350px;
+			width: 100%;
+		}
 	}
 }
