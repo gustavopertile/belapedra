@@ -13,20 +13,6 @@ jQuery(document).ready(function () {
 		jQuery('header').addClass('branco');
 	}
 
-	// var myHeaders = {
-	// 	headers: {
-	// 		Accept: 'application/json',
-	// 	},
-	// };
-	var myInit = {
-		method: 'GET',
-		headers: {
-			Accept: 'application/json',
-		},
-		mode: 'cors',
-		cache: 'default',
-	};
-
 	jQuery('#contato-pais').change(function () {
 		idCountry = jQuery(this).val();
 		console.log(idCountry);
