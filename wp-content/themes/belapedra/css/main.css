@@ -551,7 +551,7 @@ footer .footer-menu li a::before {
   height: 50px;
   max-width: 100px;
   width: 100%;
-  margin: 50px auto 0;
+  margin: 0 auto;
   background: none;
   border: none;
   border-bottom: 5px solid #b8af9b;
@@ -567,8 +567,22 @@ footer .footer-menu li a::before {
 }
 
 .formulario form .captcha {
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: 350px;
+  width: 100%;
+}
+
+.formulario form .captcha .gglcptch_v2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mapa {
+  height: 650px;
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
