@@ -441,8 +441,9 @@ footer {
 		flex-direction: column;
 		justify-content: center;
 
-		input {
-			border-radius: 50px;
+		input,
+		select {
+			border-radius: 20px;
 			border: 1px solid #4a4a4a;
 			padding: 20px;
 			margin-bottom: 15px;
@@ -450,8 +451,17 @@ footer {
 			width: 100%;
 		}
 
+		select {
+			padding: 0 17px 0;
+		}
+
+		select:invalid {
+			color: gray;
+		}
+
 		input:focus,
-		#contato-mensagem:focus {
+		#contato-mensagem:focus,
+		select:focus {
 			outline: 2px solid #f2efe9;
 			border: 2px solid #b8af9b;
 		}

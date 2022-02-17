@@ -55,3 +55,29 @@ if (!function_exists('create_post_type')) {
     }
     add_action('init', 'create_post_type');
 }
+
+ini_set("allow_url_fopen", 1);
+
+function get_JSON($url)
+{
+    $ch = curl_init($url);
+    curl_setopt_array($ch, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_HTTPHEADER => array('Accept: application/json')
+    ));
+    $resp = curl_exec($ch);
+    $resp = json_decode($resp);
+    curl_close($ch);
+    return $resp;
+}
+
+function gambiarra()
+{
+    if (!empty($_POST['url'])) {
+        get_JSON($_POST['url']);
+        echo json_encode((get_JSON($_POST['url'])));
+        die();
+    }
+}
+
+add_action("wp_ajax_gambiarra", "gambiarra");

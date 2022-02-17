@@ -522,8 +522,9 @@ footer .footer-menu li a::before {
           justify-content: center;
 }
 
-.formulario form input {
-  border-radius: 50px;
+.formulario form input,
+.formulario form select {
+  border-radius: 20px;
   border: 1px solid #4a4a4a;
   padding: 20px;
   margin-bottom: 15px;
@@ -531,8 +532,17 @@ footer .footer-menu li a::before {
   width: 100%;
 }
 
+.formulario form select {
+  padding: 0 17px 0;
+}
+
+.formulario form select:invalid {
+  color: gray;
+}
+
 .formulario form input:focus,
-.formulario form #contato-mensagem:focus {
+.formulario form #contato-mensagem:focus,
+.formulario form select:focus {
   outline: 2px solid #f2efe9;
   border: 2px solid #b8af9b;
 }

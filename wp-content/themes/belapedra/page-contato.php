@@ -18,13 +18,44 @@ $mapa = get_field('mapa');
 
       <div class="formulario">
          <form action="">
-            <input type="text" id="contato-nome" placeholder="NOME">
-            <input type="text" id="contato-telefone" placeholder="TELEFONE">
-            <input type="email" id="contato-email" placeholder="E-MAIL">
-            <input type="text" id="contato-pais" placeholder="PAÍS">
-            <input type="text" id="contato-estado" placeholder="ESTADO">
-            <input type="text" id="contato-cidade" placeholder="CIDADE">
-            <textarea type="text" id="contato-mensagem" placeholder="MENSAGEM"></textarea>
+            <input type="text" id="contato-nome" placeholder="NOME" required>
+            <input type="text" id="contato-telefone" placeholder="TELEFONE" required>
+            <input type="email" id="contato-email" placeholder="E-MAIL" required>
+
+            <select id="contato-pais" required name="country">
+               <option id="option-disable" value disabled selected hidden>PAÍS</option>
+
+               <?php
+               // $resp = get_JSON('https://servicodados.ibge.gov.br/api/v1/localidades/paises');
+               $resp = get_JSON('http://www.geonames.org/childrenJSON?geonameId=6255150&username=demo');
+               foreach ($resp->geonames as $country) {
+                  // echo '<option value="' . $country->id->M49 . '">' . $country->nome . '</option>';
+                  echo '<option value="' . $country->geonameId . '">' . $country->countryName . '</option>';
+               }
+               ?>
+
+            </select>
+
+            <select id="contato-estado" required>
+               <option id="option-disable" value disabled selected hidden>ESTADO</option>
+
+               <?php
+               $selectOption = $_POST['country'];
+               $resp = get_JSON("http://www.geonames.org/childrenJSON?geonameId=");
+               foreach ($resp as $state) {
+                  echo '<option value="' . $state->id . '">' . $state->nome . '</option>';
+               }
+               ?>
+
+            </select>
+            <select id="contato-cidade" required>
+               <option id="option-disable" value disabled selected hidden>CIDADE</option>
+               <option>Erechim</option>
+            </select>
+
+
+
+            <textarea type="text" id="contato-mensagem" placeholder="MENSAGEM" required></textarea>
             <div class="captcha">
                <?= $captcha ?>
             </div>
@@ -39,5 +70,6 @@ $mapa = get_field('mapa');
 <?php endwhile;
    echo '</main>';
 endif; ?>
+
 
 <?php get_footer(); ?>
