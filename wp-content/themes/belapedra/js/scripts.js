@@ -28,6 +28,10 @@ jQuery(document).ready(function () {
 			success: function (data) {
 				if (data) {
 					console.log(data.geonames);
+					states = data.geonames;
+					jQuery(states).each(function (state) {
+						console.log(state);
+					});
 				}
 			},
 		});
