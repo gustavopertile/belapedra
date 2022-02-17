@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
 			},
 			success: function (data) {
 				if (data) {
-					console.log(data);
+					console.log(data.geonames);
 				}
 			},
 		});
