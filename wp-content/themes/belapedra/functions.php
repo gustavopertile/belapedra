@@ -71,13 +71,13 @@ function get_JSON($url)
     return $resp;
 }
 
-function gambiarra()
-{
-    if (!empty($_POST['url'])) {
-        get_JSON($_POST['url']);
-        echo json_encode((get_JSON($_POST['url'])));
-        die();
-    }
-}
+// function gambiarra()
+// {
+//     if (!empty($_POST['url'])) {
+//         get_JSON($_POST['url']);
+//         echo json_encode((get_JSON($_POST['url'])));
+//         die();
+//     }
+// }
 
-add_action("wp_ajax_gambiarra", "gambiarra");
+// add_action("wp_ajax_gambiarra", "gambiarra");

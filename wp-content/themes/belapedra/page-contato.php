@@ -40,11 +40,11 @@ $mapa = get_field('mapa');
                <option id="option-disable" value disabled selected hidden>ESTADO</option>
 
                <?php
-               $selectOption = $_POST['country'];
-               $resp = get_JSON("http://www.geonames.org/childrenJSON?geonameId=");
-               foreach ($resp as $state) {
-                  echo '<option value="' . $state->id . '">' . $state->nome . '</option>';
-               }
+               // $selectOption = $_POST['country'];
+               // $resp = get_JSON("http://www.geonames.org/childrenJSON?geonameId=");
+               // foreach ($resp as $state) {
+               //    echo '<option value="' . $state->id . '">' . $state->nome . '</option>';
+               // }
                ?>
 
             </select>

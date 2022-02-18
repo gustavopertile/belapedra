@@ -13,27 +13,79 @@ jQuery(document).ready(function () {
 		jQuery('header').addClass('branco');
 	}
 
+	const selectStates = jQuery('#contato-estado');
+	const selectCities = jQuery('#contato-cidade');
+
 	jQuery('#contato-pais').change(function () {
+		clearStates();
+		clearCities();
+
 		idCountry = jQuery(this).val();
 		console.log(idCountry);
 
-		jQuery.ajax({
-			url: '/wp-admin/admin-ajax.php',
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				action: 'gambiarra',
-				url: 'http://www.geonames.org/childrenJSON?geonameId=' + idCountry,
-			},
-			success: function (data) {
-				if (data) {
-					console.log(data.geonames);
-					states = data.geonames;
-					jQuery(states).each(function (state) {
-						console.log(state);
-					});
-				}
-			},
-		});
+		fetch('http://www.geonames.org/childrenJSON?geonameId=' + idCountry)
+			.then((response) => response.json())
+			.then((jsondata) => {
+				let states = jsondata.geonames;
+
+				states.map((state) => {
+					const option = document.createElement('option');
+
+					option.setAttribute('value', state.geonameId);
+					option.textContent = state.name;
+
+					selectStates.append(option);
+				});
+			});
 	});
+
+	jQuery('#contato-estado').change(function () {
+		clearCities();
+
+		idState = jQuery(this).val();
+		console.log(idState);
+
+		fetch('http://www.geonames.org/childrenJSON?geonameId=' + idState)
+			.then((response) => response.json())
+			.then((jsondata) => {
+				let cities = jsondata.geonames;
+
+				cities.map((city) => {
+					const option = document.createElement('option');
+
+					option.setAttribute('value', city.geonameId);
+					option.textContent = city.name;
+
+					selectCities.append(option);
+				});
+			});
+	});
+
+	function clearStates() {
+		selectCities
+			.find('option')
+			.remove()
+			.end()
+			.append(
+				'<option id="option-disable" value disabled selected hidden>CIDADE</option>'
+			);
+
+		selectStates
+			.find('option')
+			.remove()
+			.end()
+			.append(
+				'<option id="option-disable" value disabled selected hidden>ESTADO</option>'
+			);
+	}
+
+	function clearCities() {
+		selectCities
+			.find('option')
+			.remove()
+			.end()
+			.append(
+				'<option id="option-disable" value disabled selected hidden>CIDADE</option>'
+			);
+	}
 });
