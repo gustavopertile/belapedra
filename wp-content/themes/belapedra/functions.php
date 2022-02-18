@@ -37,19 +37,20 @@ if (!function_exists('create_post_type')) {
     function create_post_type()
     {
         register_post_type(
-            'Curriculos',
+            'Contatos',
             array(
                 'labels' => array(
-                    'name' => __('Currículos'),
-                    'singular_name' => __('Currículos'),
+                    'name' => __('Contatos'),
+                    'singular_name' => __('Contatos'),
+                    'localidade' => ('Contatos')
                 ),
                 'public' => true,
                 'supports' => array('title', 'custom-fields'),
-                'has_archive' => 'curriculos',
+                'has_archive' => 'contatos',
                 'hierarchical' => true,
                 'show_in_rest' => false,
                 'menu_icon' => "dashicons-id-alt",
-                'rewrite' => array('slug' => 'curriculos')
+                'rewrite' => array('slug' => 'contatos')
             )
         );
     }
@@ -70,14 +71,3 @@ function get_JSON($url)
     curl_close($ch);
     return $resp;
 }
-
-// function gambiarra()
-// {
-//     if (!empty($_POST['url'])) {
-//         get_JSON($_POST['url']);
-//         echo json_encode((get_JSON($_POST['url'])));
-//         die();
-//     }
-// }
-
-// add_action("wp_ajax_gambiarra", "gambiarra");

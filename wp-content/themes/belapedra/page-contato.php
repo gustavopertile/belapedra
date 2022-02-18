@@ -26,10 +26,8 @@ $mapa = get_field('mapa');
                <option id="option-disable" value disabled selected hidden>PAÍS</option>
 
                <?php
-               // $resp = get_JSON('https://servicodados.ibge.gov.br/api/v1/localidades/paises');
                $resp = get_JSON('http://www.geonames.org/childrenJSON?geonameId=6255150&username=demo');
                foreach ($resp->geonames as $country) {
-                  // echo '<option value="' . $country->id->M49 . '">' . $country->nome . '</option>';
                   echo '<option value="' . $country->geonameId . '">' . $country->countryName . '</option>';
                }
                ?>
@@ -38,21 +36,12 @@ $mapa = get_field('mapa');
 
             <select id="contato-estado" required>
                <option id="option-disable" value disabled selected hidden>ESTADO</option>
-
-               <?php
-               // $selectOption = $_POST['country'];
-               // $resp = get_JSON("http://www.geonames.org/childrenJSON?geonameId=");
-               // foreach ($resp as $state) {
-               //    echo '<option value="' . $state->id . '">' . $state->nome . '</option>';
-               // }
-               ?>
-
             </select>
+
+
             <select id="contato-cidade" required>
                <option id="option-disable" value disabled selected hidden>CIDADE</option>
-               <option>Erechim</option>
             </select>
-
 
 
             <textarea type="text" id="contato-mensagem" placeholder="MENSAGEM" required></textarea>

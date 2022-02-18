@@ -1,6 +1,6 @@
-console.log('teste');
-
 jQuery(document).ready(function () {
+	// Popups A BELAPEDRA
+
 	jQuery('.abelapedra-gestao-imagens .item').on('click', function () {
 		jQuery(this).find('.popup').addClass('show');
 		jQuery('.abelapedra-gestao-imagens .close').addClass('show');
@@ -9,9 +9,14 @@ jQuery(document).ready(function () {
 		jQuery('.abelapedra-gestao-imagens .item .popup').removeClass('show');
 		jQuery('.abelapedra-gestao-imagens .close').removeClass('show');
 	});
+
+	// HEADER branco
+
 	if (jQuery('#page-contato').length) {
 		jQuery('header').addClass('branco');
 	}
+
+	// Seleção de País/Estado/Cidade automatizado com API
 
 	const selectStates = jQuery('#contato-estado');
 	const selectCities = jQuery('#contato-cidade');
@@ -62,14 +67,6 @@ jQuery(document).ready(function () {
 	});
 
 	function clearStates() {
-		selectCities
-			.find('option')
-			.remove()
-			.end()
-			.append(
-				'<option id="option-disable" value disabled selected hidden>CIDADE</option>'
-			);
-
 		selectStates
 			.find('option')
 			.remove()
