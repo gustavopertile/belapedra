@@ -58,30 +58,49 @@ if (!function_exists('create_post_type')) {
     add_action('init', 'create_post_type');
 }
 
-function add_post($nome, $telefone, $email, $pais, $estado, $cidade, $mensagem)
+function add_post($post)
 {
-    $content = 'Telefone: ' . $telefone .
-        '<br> Email: ' . $email .
-        '<br> Pais: ' . $pais .
-        '<br> Estado: ' . $estado .
-        '<br> Cidade: ' . $cidade .
-        '<br> Mensagem: ' . $mensagem;
 
-    $title = 'Contato de' . $nome;
-
+    $title = 'Contato de ' . $post['contato-nome'];
 
     $my_post = array(
         'post_type' => 'Contatos',
         'post_title'    => $title,
-        'post_content'  => $content,
-        'post_status'   => 'publish',
+        'post_content'  => '',
+        'post_status'   => 'private',
         'post_author'   => 1,
         'post_category' => array(8, 39)
     );
 
     // Insert the post into the database.
-    wp_insert_post($my_post);
+    $post_id = wp_insert_post($my_post);
+
+    foreach ($post as $key => $value) {
+        add_post_meta($post_id, $key, wp_strip_all_tags($value));
+    }
+
+    contact_form_meta_box($post);
 }
+
+function contact_form_meta_box($post)
+{
+    echo 'Nome: ' . get_post_meta($post->ID, 'contato-nome', true) . '<br><br>';
+    echo 'Telefone: ' . get_post_meta($post->ID, 'contato-telefone', true) . '<br><br>';
+    echo 'Email: ' . get_post_meta($post->ID, 'contato-email', true) . '<br><br>';
+    echo 'Mensagem: ' . get_post_meta($post->ID, 'contato-mensagem', true) . '<br><br>';
+    echo get_post_meta($post->ID, 'contato-cidade', true) . ', ' .
+        get_post_meta($post->ID, 'contato-estado', true) . ', ' .
+        get_post_meta($post->ID, 'contato-pais', true);
+}
+
+
+add_action('add_meta_boxes', 'add_contact_form_meta_box');
+function add_contact_form_meta_box()
+{
+    add_meta_box('contact-form-meta-box-id', 'Informações', 'contact_form_meta_box', 'contatos', 'normal', 'high');
+}
+
+
 
 
 ini_set("allow_url_fopen", 1);

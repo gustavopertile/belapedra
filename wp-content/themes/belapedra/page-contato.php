@@ -17,7 +17,7 @@ $mapa = get_field('mapa');
 
 
       <div class="formulario">
-         <form action="" method="post">
+         <form action="" method="post" id="form-contato">
             <input type="text" id="contato-nome" name="contato-nome" placeholder="NOME" required>
             <input type="text" id="contato-telefone" name="contato-telefone" placeholder="TELEFONE" required>
             <input type="email" id="contato-email" name="contato-email" placeholder="E-MAIL" required>
@@ -28,7 +28,7 @@ $mapa = get_field('mapa');
                <?php
                $resp = get_JSON('http://www.geonames.org/childrenJSON?geonameId=6255150&username=demo');
                foreach ($resp->geonames as $country) {
-                  echo '<option value="' . $country->geonameId . '">' . $country->countryName . '</option>';
+                  echo '<option data-id="' . $country->geonameId . '" value="' . $country->name . '">' . $country->countryName . '</option>';
                }
                ?>
 
@@ -65,24 +65,8 @@ endif;
 if (isset($_POST['contato-submit'])) {
    sendEmail($_POST['contato-email']);
 
-
-   // var_dump($_POST['contato-nome']);
-   // var_dump($_POST['contato-telefone']);
-   // var_dump($_POST);
-   // die();
-
-   add_post(
-      $_POST['contato-nome'],
-      $_POST['contato-telefone'],
-      $_POST['contato-email'],
-      $_POST['contato-pais'],
-      $_POST['contato-estado'],
-      $_POST['contato-cidade'],
-      $_POST['contato-mensagem']
-   );
+   add_post($_POST);
 }
 
-?>
 
-
-<?php get_footer(); ?>
+get_footer(); ?>

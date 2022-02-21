@@ -25,7 +25,8 @@ jQuery(document).ready(function () {
 		clearStates();
 		clearCities();
 
-		idCountry = jQuery(this).val();
+		idCountry = jQuery(this).find('option:selected').data('id');
+
 		console.log(idCountry);
 
 		fetch('http://www.geonames.org/childrenJSON?geonameId=' + idCountry)
@@ -36,7 +37,8 @@ jQuery(document).ready(function () {
 				states.map((state) => {
 					const option = document.createElement('option');
 
-					option.setAttribute('value', state.geonameId);
+					option.setAttribute('value', state.name);
+					option.setAttribute('data-id', state.geonameId);
 					option.textContent = state.name;
 
 					selectStates.append(option);
@@ -47,7 +49,7 @@ jQuery(document).ready(function () {
 	jQuery('#contato-estado').change(function () {
 		clearCities();
 
-		idState = jQuery(this).val();
+		idState = jQuery(this).find('option:selected').data('id');
 		console.log(idState);
 
 		fetch('http://www.geonames.org/childrenJSON?geonameId=' + idState)
@@ -58,7 +60,8 @@ jQuery(document).ready(function () {
 				cities.map((city) => {
 					const option = document.createElement('option');
 
-					option.setAttribute('value', city.geonameId);
+					option.setAttribute('value', city.name);
+					option.setAttribute('data-id', city.geonameId);
 					option.textContent = city.name;
 
 					selectCities.append(option);
@@ -85,4 +88,6 @@ jQuery(document).ready(function () {
 				'<option id="option-disable" value disabled selected hidden>CIDADE</option>'
 			);
 	}
+
+	jQuery('#form-contato').on('submit', function () {});
 });
