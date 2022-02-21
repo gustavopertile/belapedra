@@ -33,6 +33,7 @@ add_image_size('local_bela_pedra', 1800, 780, false);
 add_image_size('banners', 1800, 780, false);
 
 
+// Custom post type
 if (!function_exists('create_post_type')) {
     function create_post_type()
     {
@@ -41,7 +42,7 @@ if (!function_exists('create_post_type')) {
             array(
                 'labels' => array(
                     'name' => __('Contatos'),
-                    'singular_name' => __('Contatos'),
+                    'singular_name' => __('Contato'),
                     'localidade' => ('Contatos')
                 ),
                 'public' => true,
@@ -57,7 +58,35 @@ if (!function_exists('create_post_type')) {
     add_action('init', 'create_post_type');
 }
 
+function add_post($nome, $telefone, $email, $pais, $estado, $cidade, $mensagem)
+{
+    $content = 'Telefone: ' . $telefone .
+        '<br> Email: ' . $email .
+        '<br> Pais: ' . $pais .
+        '<br> Estado: ' . $estado .
+        '<br> Cidade: ' . $cidade .
+        '<br> Mensagem: ' . $mensagem;
+
+    $title = 'Contato de' . $nome;
+
+
+    $my_post = array(
+        'post_type' => 'Contatos',
+        'post_title'    => $title,
+        'post_content'  => $content,
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_category' => array(8, 39)
+    );
+
+    // Insert the post into the database.
+    wp_insert_post($my_post);
+}
+
+
 ini_set("allow_url_fopen", 1);
+
+// get json
 
 function get_JSON($url)
 {
@@ -70,4 +99,20 @@ function get_JSON($url)
     $resp = json_decode($resp);
     curl_close($ch);
     return $resp;
+}
+
+// enviar email contato
+
+function sendEmail($email)
+{
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+    $content = file_get_contents('/Users/gustavofollador/Sites/belapedra/wp-content/themes/belapedra/emails/contato.html');
+    // '<html><h1>teste</h1></html>';
+
+    wp_mail(
+        $email,
+        'Obrigado pelo contato! - A Bela Pedra',
+        $content,
+        $headers
+    );
 }

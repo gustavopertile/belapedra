@@ -17,12 +17,12 @@ $mapa = get_field('mapa');
 
 
       <div class="formulario">
-         <form action="">
-            <input type="text" id="contato-nome" placeholder="NOME" required>
-            <input type="text" id="contato-telefone" placeholder="TELEFONE" required>
-            <input type="email" id="contato-email" placeholder="E-MAIL" required>
+         <form action="" method="post">
+            <input type="text" id="contato-nome" name="contato-nome" placeholder="NOME" required>
+            <input type="text" id="contato-telefone" name="contato-telefone" placeholder="TELEFONE" required>
+            <input type="email" id="contato-email" name="contato-email" placeholder="E-MAIL" required>
 
-            <select id="contato-pais" required name="country">
+            <select id="contato-pais" name="contato-pais" required name="country">
                <option id="option-disable" value disabled selected hidden>PAÍS</option>
 
                <?php
@@ -34,21 +34,21 @@ $mapa = get_field('mapa');
 
             </select>
 
-            <select id="contato-estado" required>
+            <select id="contato-estado" name="contato-estado" required>
                <option id="option-disable" value disabled selected hidden>ESTADO</option>
             </select>
 
 
-            <select id="contato-cidade" required>
+            <select id="contato-cidade" name="contato-cidade" required>
                <option id="option-disable" value disabled selected hidden>CIDADE</option>
             </select>
 
 
-            <textarea type="text" id="contato-mensagem" placeholder="MENSAGEM" required></textarea>
+            <textarea type="text" id="contato-mensagem" name="contato-mensagem" placeholder="MENSAGEM" required></textarea>
             <div class="captcha">
                <?= $captcha ?>
             </div>
-            <button type="submit" id="contato-submit">ENVIAR</button>
+            <button type="submit" id="contato-submit" name="contato-submit">ENVIAR</button>
          </form>
       </div>
 
@@ -58,7 +58,31 @@ $mapa = get_field('mapa');
 
 <?php endwhile;
    echo '</main>';
-endif; ?>
+endif;
+
+// Email
+
+if (isset($_POST['contato-submit'])) {
+   sendEmail($_POST['contato-email']);
+
+
+   // var_dump($_POST['contato-nome']);
+   // var_dump($_POST['contato-telefone']);
+   // var_dump($_POST);
+   // die();
+
+   add_post(
+      $_POST['contato-nome'],
+      $_POST['contato-telefone'],
+      $_POST['contato-email'],
+      $_POST['contato-pais'],
+      $_POST['contato-estado'],
+      $_POST['contato-cidade'],
+      $_POST['contato-mensagem']
+   );
+}
+
+?>
 
 
 <?php get_footer(); ?>
