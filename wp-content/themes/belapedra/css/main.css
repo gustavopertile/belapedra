@@ -595,4 +595,11 @@ footer .footer-menu li a::before {
   height: 650px;
   width: 100%;
 }
+
+.home-thumbnail {
+  width: 100vw;
+  height: auto;
+  z-index: 0;
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

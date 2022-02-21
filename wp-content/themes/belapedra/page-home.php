@@ -8,38 +8,15 @@ $banners = get_field('banners');
 ?>
 
 
-<section class="page">
-   <div class="container">
-
-      <!-- LOOP DO WORDPRESS -->
-      <?php if (have_posts()) :
-         while (have_posts()) : the_post();
-            the_post_thumbnail(); ?>
-            <h1><?php the_title(); ?></h1>
-      <?php the_content();
-         endwhile;
-      else : endif; ?>
-
-      <?php if ($title) : ?>
-         <h1><?php echo $title ?></h1>
-      <?php endif; ?>
-
-      <?php if ($other_description) : ?>
-         <?php echo $other_description ?>
-      <?php endif; ?>
-
-      <!-- <?php if ($banners) : ?>
-
-         <?php foreach ($banners as $banner) : ?>
-
-            <img src="<?= $banner['sizes']['banners'] ?>" alt="" class="img-fluid">
-
-         <?php endforeach ?>
-
-      <?php endif; ?> -->
+<?php if (have_posts()) :
+   echo '<main id="page-abelapedra">';
+   while (have_posts()) : the_post();
+      the_post_thumbnail('post-thumbnail', array('class' => 'home-thumbnail'));
 
 
-   </div>
-</section>
+   endwhile;
+   echo '</main>';
+endif; ?>
+
 
 <?php get_footer(); ?>
