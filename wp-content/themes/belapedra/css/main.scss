@@ -15,7 +15,8 @@
 header.branco {
 	position: inherit;
 	background: none;
-	.top-bar {
+	.top-bar,
+	.blog-top-bar {
 		li {
 			border-bottom: 0.5px #746f69 solid;
 			a {
@@ -25,11 +26,17 @@ header.branco {
 				}
 			}
 		}
+		#menu-item-262 {
+			width: 262px;
+		}
 	}
 
 	.container {
-		.logo-header h3 {
-			color: #746f69;
+		.logo-header,
+		.blog-logo-header {
+			h3 {
+				color: #746f69;
+			}
 		}
 	}
 }
@@ -47,7 +54,8 @@ header {
 	height: 118px;
 	position: absolute;
 	top: 0;
-	.top-bar {
+	.top-bar,
+	.blog-top-bar {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -98,16 +106,28 @@ header {
 		div {
 			min-width: 400px;
 		}
-		.logo-header {
+		.blog-top-bar {
+			min-width: 584px;
+		}
+		.logo-header,
+		.blog-logo-header {
 			min-width: auto;
 			margin: 0 30px;
+
+			h3 {
+				margin-top: 10px;
+				font-size: 9px;
+				color: #ffffff;
+				font-family: 'Big John';
+				text-align: center;
+			}
 		}
-		.logo-header h3 {
-			margin-top: 10px;
-			font-size: 9px;
-			color: #ffffff;
-			font-family: 'Big John';
-			text-align: center;
+
+		.blog-logo-header {
+			margin: -17px 30px 0;
+			h3 {
+				font-size: 12px;
+			}
 		}
 	}
 	.bandeiras {

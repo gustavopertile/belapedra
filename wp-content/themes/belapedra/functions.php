@@ -33,7 +33,7 @@ add_image_size('local_bela_pedra', 1800, 780, false);
 add_image_size('banners', 1800, 780, false);
 
 
-// Custom post type
+// Custom post type Contatos
 if (!function_exists('create_post_type')) {
     function create_post_type()
     {
@@ -134,4 +134,23 @@ function sendEmail($email)
         $content,
         $headers
     );
+}
+
+
+// Custom post type Blog
+if (!function_exists('create_post_type_blog')) {
+    function create_post_type_blog()
+    {
+        register_post_type(
+            'Blog',
+            array(
+                'labels' => array(
+                    'name' => __('Blog'),
+                    'singular_name' => __('Blog'),
+                    'localidade' => ('Blog')
+                )
+            ),
+
+        );
+    }
 }

@@ -15,19 +15,28 @@ header.branco {
   background: none;
 }
 
-header.branco .top-bar li {
+header.branco .top-bar li,
+header.branco .blog-top-bar li {
   border-bottom: 0.5px #746f69 solid;
 }
 
-header.branco .top-bar li a {
+header.branco .top-bar li a,
+header.branco .blog-top-bar li a {
   color: #746f69;
 }
 
-header.branco .top-bar li a::after {
+header.branco .top-bar li a::after,
+header.branco .blog-top-bar li a::after {
   background: #b8af9b;
 }
 
-header.branco .container .logo-header h3 {
+header.branco .top-bar #menu-item-262,
+header.branco .blog-top-bar #menu-item-262 {
+  width: 262px;
+}
+
+header.branco .container .logo-header h3,
+header.branco .container .blog-logo-header h3 {
   color: #746f69;
 }
 
@@ -41,7 +50,8 @@ header {
   top: 0;
 }
 
-header .top-bar {
+header .top-bar,
+header .blog-top-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -51,13 +61,15 @@ header .top-bar {
   display: flex;
 }
 
-header .top-bar li {
+header .top-bar li,
+header .blog-top-bar li {
   border-bottom: 0.5px #fdd79f solid;
   padding-bottom: 20px;
   position: relative;
 }
 
-header .top-bar li a {
+header .top-bar li a,
+header .blog-top-bar li a {
   font-size: 14px;
   padding: 20px;
   color: #fdd79f;
@@ -66,7 +78,8 @@ header .top-bar li a {
   text-align: center;
 }
 
-header .top-bar li a::after {
+header .top-bar li a::after,
+header .blog-top-bar li a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -81,11 +94,13 @@ header .top-bar li a::after {
   margin: auto;
 }
 
-header .top-bar li a:hover:after {
+header .top-bar li a:hover:after,
+header .blog-top-bar li a:hover:after {
   width: 100%;
 }
 
-header .top-bar li a:hover {
+header .top-bar li a:hover,
+header .blog-top-bar li a:hover {
   text-decoration: none;
 }
 
@@ -107,17 +122,31 @@ header .container div {
   min-width: 400px;
 }
 
-header .container .logo-header {
+header .container .blog-top-bar {
+  min-width: 584px;
+}
+
+header .container .logo-header,
+header .container .blog-logo-header {
   min-width: auto;
   margin: 0 30px;
 }
 
-header .container .logo-header h3 {
+header .container .logo-header h3,
+header .container .blog-logo-header h3 {
   margin-top: 10px;
   font-size: 9px;
   color: #ffffff;
   font-family: 'Big John';
   text-align: center;
+}
+
+header .container .blog-logo-header {
+  margin: -17px 30px 0;
+}
+
+header .container .blog-logo-header h3 {
+  font-size: 12px;
 }
 
 header .bandeiras {

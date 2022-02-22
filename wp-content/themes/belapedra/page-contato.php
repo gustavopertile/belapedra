@@ -19,7 +19,7 @@ $mapa = get_field('mapa');
       <div class="formulario">
          <form action="http://belapedra.gustavo.com/" method="post" id="form-contato">
             <input type="text" id="contato-nome" name="contato-nome" placeholder="NOME" required>
-            <input type="text" id="contato-telefone" name="contato-telefone" placeholder="TELEFONE" required>
+            <input type="text" id="contato-telefone" name="contato-telefone" placeholder="TELEFONE" onkeypress="mask(this, mphone);" required>
             <input type="email" id="contato-email" name="contato-email" placeholder="E-MAIL" required>
 
             <select id="contato-pais" name="contato-pais" required name="country">
