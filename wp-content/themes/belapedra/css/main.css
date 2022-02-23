@@ -668,10 +668,11 @@ footer .footer-menu li a::before {
   font-family: 'Ubuntu';
   text-align: center;
   max-width: 400px;
+  margin-top: 20px;
 }
 
 #page-blog .container-blog .leia-mais-blog {
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 20px;
   border: 1px solid #4a4a4a;
   width: 200px;
