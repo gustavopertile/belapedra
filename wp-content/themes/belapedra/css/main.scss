@@ -510,6 +510,7 @@ footer {
 			background: none;
 			border: none;
 			border-bottom: 5px solid #b8af9b;
+			transition: all 0.6s;
 		}
 
 		#contato-submit:hover {
@@ -583,6 +584,7 @@ footer {
 		}
 
 		.leia-mais-blog {
+			transition: 0.6s;
 			margin-top: 20px;
 			border-radius: 20px;
 			border: 1px solid #4a4a4a;
@@ -599,9 +601,9 @@ footer {
 		}
 
 		.leia-mais-blog:hover {
-			font-size: 107%;
+			font-size: 110%;
 			background: #f2efe9;
-			border-bottom: 2px solid #4a4a4a;
+			border-bottom: 1px solid #4a4a4a;
 			transition: 0.6s;
 			cursor: pointer;
 		}
@@ -621,6 +623,12 @@ footer {
 
 		.descricao-blog {
 			align-items: center;
+		}
+	}
+
+	.posts-anteriores {
+		a {
+			text-decoration: none;
 		}
 	}
 }

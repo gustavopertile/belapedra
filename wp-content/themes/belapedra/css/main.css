@@ -598,6 +598,8 @@ footer .footer-menu li a::before {
   background: none;
   border: none;
   border-bottom: 5px solid #b8af9b;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .formulario form #contato-submit:hover {
@@ -672,6 +674,8 @@ footer .footer-menu li a::before {
 }
 
 #page-blog .container-blog .leia-mais-blog {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   margin-top: 20px;
   border-radius: 20px;
   border: 1px solid #4a4a4a;
@@ -689,9 +693,9 @@ footer .footer-menu li a::before {
 }
 
 #page-blog .container-blog .leia-mais-blog:hover {
-  font-size: 107%;
+  font-size: 110%;
   background: #f2efe9;
-  border-bottom: 2px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   cursor: pointer;
@@ -722,5 +726,9 @@ footer .footer-menu li a::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#page-blog .posts-anteriores a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

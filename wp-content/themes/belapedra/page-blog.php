@@ -99,13 +99,14 @@
             echo '<img src=' . $imagem . '>';
             echo '</div>';
 
-
-
             $invertido = false;
          }
 
          echo '</div>';
       }
+      echo '<div class="posts-anteriores">';
+      echo '<a href="">POSTS ANTERIORES</a>';
+      echo '</div>';
 
       echo '</main>';
    endif;
