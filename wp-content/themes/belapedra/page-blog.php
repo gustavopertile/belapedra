@@ -47,22 +47,66 @@
    </header>
 
    <?php
-   $titulo = get_field('titulo');
-   $descricao = get_field('descricao_titulo');
-   ?>
 
+   $query = new WP_Query(array(
+      'post_type' => 'blog',
+      'orderby' => 'title',
+      'order' => 'ASC'
+   ));
 
-   <?php if (have_posts()) :
+   $invertido = false;
+
+   if ($query->have_posts()) :
       echo '<main id="page-blog">';
 
-      while (have_posts()) : the_post();
-         echo '<div class="titulo-contato">';
-         echo '<h1>' . $titulo . '</h1>';
-         echo '<p>' . $descricao . '</p>';
+      while ($query->have_posts()) {
+         $query->the_post();
+
+         $id = $query->get_the_ID();
+         $descricao = get_field('descricao', $id);
+         $imagem = get_field('imagem', $id);
+         $imagem = $imagem['url'];
+
+
+         echo '<div class="container-blog">';
+
+         if (!$invertido) {
+            echo '<div class="imagem-blog">';
+            echo '<img src=' . $imagem . '>';
+            echo '</div>';
+
+            echo '<div class="descricao-blog">';
+            echo $descricao;
+
+            echo '<div class="leia-mais-blog">';
+            echo '<a href=""> LEIA MAIS </a>';
+            echo '</div>';
+
+            echo '</div>';
+
+            $invertido = true;
+         } else {
+            echo '<div class="descricao-blog">';
+            echo $descricao;
+
+            echo '<div class="leia-mais-blog">';
+            echo '<a href=""> LEIA MAIS </a>';
+            echo '</div>';
+
+            echo '</div>';
+
+            echo '<div class="imagem-blog">';
+            echo '<img src=' . $imagem . '>';
+            echo '</div>';
+
+
+
+            $invertido = false;
+         }
+
          echo '</div>';
+      }
 
-
-      endwhile;
       echo '</main>';
    endif;
 
