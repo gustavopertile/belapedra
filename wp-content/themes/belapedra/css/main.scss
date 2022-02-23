@@ -27,7 +27,7 @@ header.branco {
 			}
 		}
 		#menu-item-262 {
-			width: 262px;
+			width: 416px;
 		}
 	}
 
@@ -38,6 +38,12 @@ header.branco {
 				color: #746f69;
 			}
 		}
+	}
+}
+
+header.blog {
+	.container {
+		max-width: 1500px;
 	}
 }
 

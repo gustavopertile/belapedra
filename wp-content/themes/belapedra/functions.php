@@ -38,7 +38,7 @@ if (!function_exists('create_post_type')) {
     function create_post_type()
     {
         register_post_type(
-            'Contatos',
+            'contatos',
             array(
                 'labels' => array(
                     'name' => __('Contatos'),
@@ -64,7 +64,7 @@ function add_post($post)
     $title = 'Contato de ' . $post['contato-nome'];
 
     $my_post = array(
-        'post_type' => 'Contatos',
+        'post_type' => 'contatos',
         'post_title'    => $title,
         'post_content'  => '',
         'post_status'   => 'private',
@@ -138,6 +138,7 @@ function sendEmail($email)
 
 
 // Custom post type Blog
+
 if (!function_exists('create_post_type_blog')) {
     function create_post_type_blog()
     {
@@ -148,9 +149,16 @@ if (!function_exists('create_post_type_blog')) {
                     'name' => __('Blog'),
                     'singular_name' => __('Blog'),
                     'localidade' => ('Blog')
-                )
-            ),
-
+                ),
+                'public' => true,
+                'supports' => array('title', 'custom-fields'),
+                'has_archive' => 'blog',
+                'hierarchical' => true,
+                'show_in_rest' => false,
+                'menu_icon' => "dashicons-id-alt",
+                'rewrite' => array('slug' => 'blog')
+            )
         );
     }
+    add_action('init', 'create_post_type_blog');
 }

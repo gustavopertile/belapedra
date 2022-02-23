@@ -32,12 +32,16 @@ header.branco .blog-top-bar li a::after {
 
 header.branco .top-bar #menu-item-262,
 header.branco .blog-top-bar #menu-item-262 {
-  width: 262px;
+  width: 416px;
 }
 
 header.branco .container .logo-header h3,
 header.branco .container .blog-logo-header h3 {
   color: #746f69;
+}
+
+header.blog .container {
+  max-width: 1500px;
 }
 
 header {

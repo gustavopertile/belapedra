@@ -17,7 +17,7 @@ $mapa = get_field('mapa');
 
 
       <div class="formulario">
-         <form action="http://belapedra.gustavo.com/" method="post" id="form-contato">
+         <form action="" method="post" id="form-contato">
             <input type="text" id="contato-nome" name="contato-nome" placeholder="NOME" required>
             <input type="text" id="contato-telefone" name="contato-telefone" placeholder="TELEFONE" onkeypress="mask(this, mphone);" required>
             <input type="email" id="contato-email" name="contato-email" placeholder="E-MAIL" required>
@@ -60,13 +60,18 @@ $mapa = get_field('mapa');
    echo '</main>';
 endif;
 
-// Email
+get_footer();
+
 
 if (isset($_POST['contato-submit'])) {
+
+   $url = 'http://belapedra.gustavo.com/';
+   echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+
    sendEmail($_POST['contato-email']);
 
    add_post($_POST);
 }
 
 
-get_footer(); ?>
+?>
