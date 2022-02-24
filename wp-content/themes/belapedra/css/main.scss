@@ -556,7 +556,7 @@ footer {
 		padding: 0 15px;
 		margin: 25px auto 40px;
 		display: flex;
-		height: 390px;
+		height: 400px;
 
 		h1 {
 			text-align: center;
@@ -609,15 +609,13 @@ footer {
 		}
 
 		div {
-			width: 650px;
+			width: 660px;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
 			img {
-				width: auto;
-				max-width: 650px;
-				height: auto;
 				max-height: 400px;
+				object-fit: cover;
 			}
 		}
 
@@ -627,8 +625,20 @@ footer {
 	}
 
 	.posts-anteriores {
+		width: 1350px;
+		margin: 10px auto 40px;
+		padding-right: 15px;
+		display: flex;
+		justify-content: flex-end;
 		a {
 			text-decoration: none;
+			font-size: 14px;
+			letter-spacing: 1px;
+			line-height: 29px;
+			color: #3f3f3f;
+			font-weight: 700;
+			font-family: 'Ubuntu';
+			text-align: center;
 		}
 	}
 }

@@ -105,7 +105,7 @@
          echo '</div>';
       }
       echo '<div class="posts-anteriores">';
-      echo '<a href="">POSTS ANTERIORES</a>';
+      echo '<a href="">POSTS ANTERIORES <img src="/wp-content/themes/belapedra/assets/images/setalink.jpg"></a>';
       echo '</div>';
 
       echo '</main>';
