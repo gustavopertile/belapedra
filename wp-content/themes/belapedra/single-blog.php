@@ -51,32 +51,83 @@
 
 
    if (have_posts()) :
-      echo '<main id="page-blog">';
+      echo '<main id="simple-page-blog">';
 
       while (have_posts()) {
          the_post();
 
-         $descricao = get_field('descricao', $id);
-         $imagem = get_field('imagem', $id);
+         $simple_page_descricao = get_field('simple_page_descricao');
+         $simple_page_titulo = get_field('simple_page_titulo');
+         $imagem = get_field('simple_page_imagem');
          $imagem = $imagem['url'];
 
-         echo '<div class="container-blog">';
+         echo '<div class="container-simple-blog">';
 
-         echo '<div class="imagem-blog">';
+         echo '<div class="titulo-simple-blog">';
+         echo $simple_page_titulo;
+         echo '</div>';
+
+         echo '<div class="imagem-simple-blog">';
          echo '<img src=' . $imagem . '>';
          echo '</div>';
 
-         echo '<div class="descricao-blog">';
-         echo $descricao;
 
-         echo '<div class="leia-mais-blog">';
+         echo '<div class="descricao-simple-blog">';
+         echo $simple_page_descricao;
          echo '</div>';
 
+         echo '<div class="imagem-simple-blog">';
+         echo '<img src=' . $imagem . '>';
          echo '</div>';
 
+
+         echo '<div class="descricao-simple-blog">';
+         echo $simple_page_descricao;
+         echo '</div>';
+
+
+         comments_template('/comments.php', true);
 
          echo '</div>';
       }
+
+
+
+      $query = new WP_Query(array(
+         'posts_per_page' => 3,
+         'post_type' => 'blog',
+         'orderby' => 'title',
+         'order' => 'ASC'
+      ));
+
+      if ($query->have_posts()) :
+         echo '<div class="mais-lidos">';
+         echo '<ul>';
+         echo '<h2>MAIS LIDOS </h2>';
+         while ($query->have_posts()) {
+            $query->the_post();
+
+            $descricao = get_field('descricao', $id);
+            $imagem = get_field('imagem', $id);
+            $imagem = $imagem['url'];
+            $id = $query->post->ID;
+
+            $url = 'http://belapedra.gustavo.com/blog/post-' . $id;
+
+            echo '<a href="' . $url . '">';
+
+            echo '<li>';
+            echo '<img src=' . $imagem . '>';
+            echo $descricao;
+            echo '</li>';
+
+            echo '</a>';
+         }
+
+         echo '</ul>';
+
+         echo '</div>';
+      endif;
 
       echo '</main>';
 

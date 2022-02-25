@@ -22,6 +22,12 @@ jQuery(document).ready(function () {
 		jQuery('header').addClass('branco blog');
 	}
 
+	// HEADER SIMPLE PAGE BLOG
+
+	if (jQuery('#simple-page-blog').length) {
+		jQuery('header').addClass('branco blog');
+	}
+
 	// Seleção de País/Estado/Cidade automatizado com API
 
 	const selectStates = jQuery('#contato-estado');

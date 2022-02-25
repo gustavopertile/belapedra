@@ -642,3 +642,193 @@ footer {
 		}
 	}
 }
+
+// SIMPLE PAGE BLOG
+
+#simple-page-blog {
+	display: flex;
+	justify-content: space-around;
+	max-width: 1400px;
+	margin: 25px auto 40px;
+	.container-simple-blog {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	h1 {
+		color: #4f4e4d;
+		font-family: Bebas Neue;
+		margin-bottom: 10px;
+	}
+
+	h4 {
+		color: #4f4e4d;
+		font-family: Raleway;
+		font-size: 15px;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 25px;
+		color: #717070;
+		font-weight: 400;
+		font-family: 'Ubuntu';
+		text-align: center;
+		max-width: 850px;
+		margin: 20px auto 20px;
+	}
+
+	.mais-lidos {
+		max-width: 300px;
+		display: flex;
+		flex-direction: column;
+		a {
+			text-decoration: none;
+		}
+
+		h2 {
+			color: #4f4e4d;
+			font-family: 'Raleway';
+			border-bottom: 4px solid #bebebe;
+			font-size: 22px;
+			line-height: 31px;
+			padding-bottom: 10px;
+		}
+
+		li {
+			max-height: 400px;
+			text-align: center;
+			border-bottom: 4px solid #bebebe;
+			margin: 20px auto;
+			overflow: hidden;
+			img {
+				height: 180px;
+				width: 100%;
+				margin-bottom: 17px;
+			}
+
+			h1 {
+				font-size: 24px;
+			}
+
+			h4 {
+				font-size: 15px;
+			}
+
+			p {
+				font-size: 13px;
+				max-height: 50px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+// COMENTÁRIOS SIMPLE PAGE BLOG
+
+#comments {
+	width: 870px;
+	border-top: 1px solid #bebebe;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 0;
+	h3 {
+		font-size: 14px;
+		margin: 20px 0;
+	}
+
+	.comment-body {
+		border-radius: 25px;
+		border: 1px solid #bebebe;
+		padding: 20px;
+		width: 350px;
+	}
+}
+
+ol.commentlist {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+ol.commentlist li {
+	margin: 0 auto 30px;
+}
+
+ol.commentlist ul {
+	margin: 0px;
+}
+
+ol.commentlist ul li {
+	margin: 20px;
+}
+
+#respond {
+	width: 785px;
+	border-radius: 25px;
+	border: 1px solid #bebebe;
+	margin: 0 auto;
+	clear: both;
+	h3 {
+		font-size: 20px;
+	}
+}
+
+#respond form label {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 60px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#respond form input {
+	border-radius: 20px;
+	border: 1px solid #bebebe;
+	padding: 5px;
+	margin-bottom: 15px;
+	width: 300px;
+}
+
+#respond form input:focus,
+#respond form textarea:focus {
+	outline: 1px solid #f2efe9;
+	border: 1px solid #4a4a4a;
+}
+
+#respond form textarea {
+	width: 600px;
+	height: 150px;
+	border-radius: 25px;
+	border: 1px solid #bebebe;
+	padding: 10px 20px;
+	margin: 0 40px 15px;
+}
+
+#respond form input.commentsubmit {
+	font-weight: 500;
+	font-family: 'Raleway';
+	color: #4a4a4a;
+	height: 50px;
+	max-width: 250px;
+	width: 100%;
+	margin: 0 auto;
+	background: none;
+	border: none;
+	border-bottom: 5px solid #b8af9b;
+	transition: all 0.6s;
+}
+
+#respond form input.commentsubmit:hover {
+	font-size: 107%;
+	background: #f2efe9;
+	border-bottom: 2px solid #b8af9b;
+	transition: 0.6s;
+	cursor: pointer;
+}

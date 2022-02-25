@@ -151,7 +151,7 @@ if (!function_exists('create_post_type_blog')) {
                     'localidade' => ('Blog')
                 ),
                 'public' => true,
-                'supports' => array('title', 'custom-fields'),
+                'supports' => array('title', 'custom-fields', 'comments', 'revisions'),
                 'has_archive' => 'blog',
                 'hierarchical' => true,
                 'show_in_rest' => false,
@@ -162,3 +162,11 @@ if (!function_exists('create_post_type_blog')) {
     }
     add_action('init', 'create_post_type_blog');
 }
+
+// function enable_comments_for_all()
+// {
+//     global $wpdb;
+//     $wpdb->query($wpdb->prepare("UPDATE $wpdb->posts SET comment_status = 'open'")); // Enable comments
+//     $wpdb->query($wpdb->prepare("UPDATE $wpdb->posts SET ping_status = 'open'")); // Enable trackbacks
+// }
+// enable_comments_for_all();
