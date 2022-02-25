@@ -724,6 +724,23 @@ footer {
 		}
 	}
 }
+.voltar-blog {
+	width: 1200px;
+	margin: 10px auto 40px;
+	padding-right: 15px;
+	display: flex;
+	justify-content: flex-start;
+	a {
+		text-decoration: none;
+		font-size: 14px;
+		letter-spacing: 1px;
+		line-height: 29px;
+		color: #3f3f3f;
+		font-weight: 700;
+		font-family: 'Ubuntu';
+		text-align: center;
+	}
+}
 
 // COMENTÁRIOS SIMPLE PAGE BLOG
 

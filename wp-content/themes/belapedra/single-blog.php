@@ -131,6 +131,10 @@
 
       echo '</main>';
 
+      echo '<div class="voltar-blog">';
+      echo '<a href="http://belapedra.gustavo.com/blog"><img src="/wp-content/themes/belapedra/assets/images/voltar.jpg"> VOLTAR</a>';
+      echo '</div>';
+
    endif;
 
    get_footer(); ?>

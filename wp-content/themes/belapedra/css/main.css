@@ -849,6 +849,29 @@ footer .footer-menu li a::before {
   overflow: hidden;
 }
 
+.voltar-blog {
+  width: 1200px;
+  margin: 10px auto 40px;
+  padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.voltar-blog a {
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 29px;
+  color: #3f3f3f;
+  font-weight: 700;
+  font-family: 'Ubuntu';
+  text-align: center;
+}
+
 #comments {
   width: 870px;
   border-top: 1px solid #bebebe;
