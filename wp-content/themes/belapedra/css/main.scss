@@ -745,6 +745,10 @@ footer {
 		border: 1px solid #bebebe;
 		padding: 20px;
 		width: 350px;
+
+		.comment-author {
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -754,18 +758,14 @@ ol.commentlist {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-}
 
-ol.commentlist li {
-	margin: 0 auto 30px;
-}
+	li {
+		margin: 0 auto 30px;
+	}
 
-ol.commentlist ul {
-	margin: 0px;
-}
-
-ol.commentlist ul li {
-	margin: 20px;
+	ul {
+		margin: 0px;
+	}
 }
 
 #respond {
@@ -777,58 +777,59 @@ ol.commentlist ul li {
 	h3 {
 		font-size: 20px;
 	}
-}
 
-#respond form label {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	width: 60px;
-	text-align: center;
-	margin: 0 auto;
-}
+	form {
+		label {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			width: 60px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		input {
+			border-radius: 20px;
+			border: 1px solid #bebebe;
+			padding: 5px;
+			margin-bottom: 15px;
+			width: 300px;
+		}
 
-#respond form input {
-	border-radius: 20px;
-	border: 1px solid #bebebe;
-	padding: 5px;
-	margin-bottom: 15px;
-	width: 300px;
-}
+		input:focus,
+		textarea:focus {
+			outline: 1px solid #f2efe9;
+			border: 1px solid #4a4a4a;
+		}
 
-#respond form input:focus,
-#respond form textarea:focus {
-	outline: 1px solid #f2efe9;
-	border: 1px solid #4a4a4a;
-}
+		textarea {
+			width: 600px;
+			height: 150px;
+			border-radius: 25px;
+			border: 1px solid #bebebe;
+			padding: 10px 20px;
+			margin: 0 40px 15px;
+		}
 
-#respond form textarea {
-	width: 600px;
-	height: 150px;
-	border-radius: 25px;
-	border: 1px solid #bebebe;
-	padding: 10px 20px;
-	margin: 0 40px 15px;
-}
+		input.commentsubmit {
+			font-weight: 500;
+			font-family: 'Raleway';
+			color: #4a4a4a;
+			height: 50px;
+			max-width: 250px;
+			width: 100%;
+			margin: 0 auto;
+			background: none;
+			border: 1px solid #bebebe;
+			border-bottom: 5px solid #b8af9b;
+			transition: all 0.6s;
+		}
 
-#respond form input.commentsubmit {
-	font-weight: 500;
-	font-family: 'Raleway';
-	color: #4a4a4a;
-	height: 50px;
-	max-width: 250px;
-	width: 100%;
-	margin: 0 auto;
-	background: none;
-	border: none;
-	border-bottom: 5px solid #b8af9b;
-	transition: all 0.6s;
-}
-
-#respond form input.commentsubmit:hover {
-	font-size: 107%;
-	background: #f2efe9;
-	border-bottom: 2px solid #b8af9b;
-	transition: 0.6s;
-	cursor: pointer;
+		input.commentsubmit:hover {
+			font-size: 107%;
+			background: #f2efe9;
+			border-bottom: 2px solid #b8af9b;
+			transition: 0.6s;
+			cursor: pointer;
+		}
+	}
 }

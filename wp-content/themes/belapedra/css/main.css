@@ -878,6 +878,10 @@ footer .footer-menu li a::before {
   width: 350px;
 }
 
+#comments .comment-body .comment-author {
+  margin-bottom: 20px;
+}
+
 ol.commentlist {
   list-style: none;
   padding-left: 0;
@@ -896,10 +900,6 @@ ol.commentlist li {
 
 ol.commentlist ul {
   margin: 0px;
-}
-
-ol.commentlist ul li {
-  margin: 20px;
 }
 
 #respond {
@@ -962,7 +962,7 @@ ol.commentlist ul li {
   width: 100%;
   margin: 0 auto;
   background: none;
-  border: none;
+  border: 1px solid #bebebe;
   border-bottom: 5px solid #b8af9b;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
