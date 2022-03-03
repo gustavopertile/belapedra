@@ -1001,6 +1001,7 @@ ol.commentlist ul {
 .thumbnail-principal {
   width: 100%;
   min-width: 800px;
+  height: 100vh;
   min-height: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1016,5 +1017,83 @@ ol.commentlist ul {
   position: relative;
   top: 400px;
   margin: auto;
+}
+
+.home-tecnologia {
+  background-image: url("/wp-content/themes/belapedra/assets/images/tecnologia_background.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  padding: 100px 50px;
+}
+
+.home-tecnologia h1 {
+  margin: 0 auto;
+  max-width: 715px;
+  margin-bottom: 15px;
+  font-family: Raleway;
+  font-size: 20px;
+  color: #4f4e4d;
+}
+
+.home-tecnologia h2 {
+  margin: 0 auto;
+  max-width: 449px;
+  max-height: 234px;
+  font-size: 50px;
+  letter-spacing: 1px;
+  line-height: 60px;
+  color: #4f4e4d;
+  font-family: Bebas Neue;
+  text-align: center;
+}
+
+.home-tecnologia .tecnologia-interno {
+  min-height: 1000px;
+  max-height: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #f2efe9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 20px;
+}
+
+.home-tecnologia .tecnologia-interno div {
+  width: 800px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-tecnologia .tecnologia-interno div img {
+  min-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=main.css.map */

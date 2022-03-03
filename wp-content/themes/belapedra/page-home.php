@@ -8,6 +8,9 @@ shuffle($thumbnail);
 $thumbnail = $thumbnail[0];
 $thumbnail = $thumbnail['url'];
 
+$tecnologiaDescricao = get_field('tecnologia_descricao');
+$tecnologiaImagem = get_field('tecnologia_imagem');
+$tecnologiaImagem = $tecnologiaImagem['url'];
 
 ?>
 
@@ -20,7 +23,16 @@ $thumbnail = $thumbnail['url'];
          <h1> <?= $title ?> </h1>
       </div>
 
-
+      <div class="home-tecnologia">
+         <div class="tecnologia-interno">
+            <div class="tecnologia-texto">
+               <?= $tecnologiaDescricao ?>
+            </div>
+            <div class="tecnologia-imagem">
+               <img src="<?= $tecnologiaImagem ?> ">
+            </div>
+         </div>
+      </div>
 <?php
    endwhile;
    echo '</main>';
