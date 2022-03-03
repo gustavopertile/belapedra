@@ -1,4 +1,10 @@
 jQuery(document).ready(function () {
+	// HOME com animação
+
+	if (jQuery('#page-home').length) {
+		AOS.init();
+	}
+
 	// Popups A BELAPEDRA
 
 	jQuery('.abelapedra-gestao-imagens .item').on('click', function () {

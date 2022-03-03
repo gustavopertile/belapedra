@@ -16,7 +16,7 @@ $tecnologiaImagem = $tecnologiaImagem['url'];
 
 
 <?php if (have_posts()) :
-   echo '<main id="page-abelapedra">';
+   echo '<main id="page-home">';
    while (have_posts()) : the_post();
 ?>
       <div class="thumbnail-principal" style="background-image: url(<?= $thumbnail ?>);">
@@ -24,11 +24,11 @@ $tecnologiaImagem = $tecnologiaImagem['url'];
       </div>
 
       <div class="home-tecnologia">
-         <div class="tecnologia-interno">
-            <div class="tecnologia-texto">
+         <div class="tecnologia-interno" data-aos="zoom-in">
+            <div class="tecnologia-texto" data-aos="zoom-in" data-aos-duration="1500">
                <?= $tecnologiaDescricao ?>
             </div>
-            <div class="tecnologia-imagem">
+            <div class="tecnologia-imagem" data-aos="zoom-in" data-aos-duration="1500">
                <img src="<?= $tecnologiaImagem ?> ">
             </div>
          </div>
