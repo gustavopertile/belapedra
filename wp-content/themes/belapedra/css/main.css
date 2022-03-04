@@ -998,7 +998,7 @@ ol.commentlist ul {
   cursor: pointer;
 }
 
-.thumbnail-principal {
+#page-home .thumbnail-principal {
   width: 100%;
   min-width: 800px;
   height: 100vh;
@@ -1007,7 +1007,7 @@ ol.commentlist ul {
   background-size: cover;
 }
 
-.thumbnail-principal h1 {
+#page-home .thumbnail-principal h1 {
   width: 580px;
   font-size: 60px;
   line-height: 55px;
@@ -1019,7 +1019,7 @@ ol.commentlist ul {
   margin: auto;
 }
 
-.home-tecnologia {
+#page-home .container-tecnologia {
   background-image: url("/wp-content/themes/belapedra/assets/images/tecnologia_background.jpg");
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1037,7 +1037,7 @@ ol.commentlist ul {
   padding: 100px 50px;
 }
 
-.home-tecnologia h1 {
+#page-home .container-tecnologia h1 {
   margin: 0 auto;
   max-width: 715px;
   margin-bottom: 15px;
@@ -1046,7 +1046,7 @@ ol.commentlist ul {
   color: #4f4e4d;
 }
 
-.home-tecnologia h2 {
+#page-home .container-tecnologia h2 {
   margin: 0 auto;
   max-width: 449px;
   max-height: 234px;
@@ -1058,7 +1058,7 @@ ol.commentlist ul {
   text-align: center;
 }
 
-.home-tecnologia .tecnologia-interno {
+#page-home .container-tecnologia .tecnologia-interno {
   min-height: 1000px;
   max-height: 1100px;
   width: 100%;
@@ -1074,7 +1074,7 @@ ol.commentlist ul {
   padding: 0 20px;
 }
 
-.home-tecnologia .tecnologia-interno div {
+#page-home .container-tecnologia .tecnologia-interno div {
   width: 800px;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
@@ -1091,9 +1091,144 @@ ol.commentlist ul {
           flex-direction: column;
 }
 
-.home-tecnologia .tecnologia-interno div img {
+#page-home .container-tecnologia .tecnologia-interno div img {
   min-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#page-home .container-blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 70px 90px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#page-home .container-blog .cima a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 800px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#page-home .container-blog .cima a .home-blog-belapedra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#page-home .container-blog .cima a .home-blog-belapedra img {
+  width: 20px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#page-home .container-blog .cima a .home-blog-belapedra h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #8b8987;
+  font-weight: 500;
+  font-family: 'Ubuntu';
+  text-align: center;
+  width: 120px;
+  margin: 0 auto;
+}
+
+#page-home .container-blog .cima a .img-blog-0 {
+  margin-left: 20px;
+}
+
+#page-home .container-blog .cima a .img-blog-1 {
+  width: 60%;
+}
+
+#page-home .container-blog .cima a .img-blog-1 img {
+  width: 100%;
+  height: 500px;
+}
+
+#page-home .container-blog .cima div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#page-home .container-blog .cima div:hover img {
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+#page-home .container-blog .baixo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+#page-home .container-blog .baixo a .img-blog-2 {
+  width: 400px;
+}
+
+#page-home .container-blog .baixo a .img-blog-2 img {
+  width: 100%;
+  height: 300px;
+}
+
+#page-home .container-blog .baixo a .img-blog-3 {
+  margin: 0 20px;
+  max-width: 470px;
+}
+
+#page-home .container-blog .baixo a .img-blog-3 img {
+  width: 100%;
+}
+
+#page-home .container-blog .baixo a .img-blog-4 {
+  max-width: 300px;
+}
+
+#page-home .container-blog .baixo a .img-blog-4 img {
+  width: 100%;
+  height: 200px;
+}
+
+#page-home .container-blog .baixo div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#page-home .container-blog .baixo div:hover img {
+  border-radius: 50%;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 /*# sourceMappingURL=main.css.map */

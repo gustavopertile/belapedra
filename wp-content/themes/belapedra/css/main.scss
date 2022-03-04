@@ -849,75 +849,181 @@ ol.commentlist {
 
 // PAGE HOME
 
-.thumbnail-principal {
-	width: 100%;
-	min-width: 800px;
-	height: 100vh;
-	min-height: 1200px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	h1 {
-		width: 580px;
-		font-size: 60px;
-		line-height: 55px;
-		color: #ffffff;
-		font-family: 'Bebas Neue';
-		text-align: center;
-		position: relative;
-		top: 400px;
-		margin: auto;
-	}
-}
-
-.home-tecnologia {
-	background-image: url('/wp-content/themes/belapedra/assets/images/tecnologia_background.jpg');
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: right top;
-	padding: 100px 50px;
-
-	h1 {
-		margin: 0 auto;
-		max-width: 715px;
-		margin-bottom: 15px;
-		font-family: Raleway;
-		font-size: 20px;
-		color: #4f4e4d;
-	}
-	h2 {
-		margin: 0 auto;
-		max-width: 449px;
-		max-height: 234px;
-		font-size: 50px;
-		letter-spacing: 1px;
-		line-height: 60px;
-		color: #4f4e4d;
-		font-family: Bebas Neue;
-		text-align: center;
-	}
-
-	.tecnologia-interno {
-		min-height: 1000px;
-		max-height: 1100px;
+#page-home {
+	.thumbnail-principal {
 		width: 100%;
-		margin: 0 auto;
+		min-width: 800px;
 		height: 100vh;
-		background-color: #f2efe9;
+		min-height: 1200px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		h1 {
+			width: 580px;
+			font-size: 60px;
+			line-height: 55px;
+			color: #ffffff;
+			font-family: 'Bebas Neue';
+			text-align: center;
+			position: relative;
+			top: 400px;
+			margin: auto;
+		}
+	}
+
+	.container-tecnologia {
+		background-image: url('/wp-content/themes/belapedra/assets/images/tecnologia_background.jpg');
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		padding: 0 20px;
-		div {
-			width: 800px;
-			max-height: fit-content;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right top;
+		padding: 100px 50px;
+
+		h1 {
+			margin: 0 auto;
+			max-width: 715px;
+			margin-bottom: 15px;
+			font-family: Raleway;
+			font-size: 20px;
+			color: #4f4e4d;
+		}
+		h2 {
+			margin: 0 auto;
+			max-width: 449px;
+			max-height: 234px;
+			font-size: 50px;
+			letter-spacing: 1px;
+			line-height: 60px;
+			color: #4f4e4d;
+			font-family: Bebas Neue;
+			text-align: center;
+		}
+
+		.tecnologia-interno {
+			min-height: 1000px;
+			max-height: 1100px;
+			width: 100%;
+			margin: 0 auto;
+			height: 100vh;
+			background-color: #f2efe9;
 			display: flex;
 			justify-content: center;
-			flex-direction: column;
-			img {
-				min-height: 500px;
-				object-fit: cover;
+			padding: 0 20px;
+			div {
+				width: 800px;
+				max-height: fit-content;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				img {
+					min-height: 500px;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	.container-blog {
+		display: flex;
+		padding: 70px 90px;
+		flex-wrap: wrap;
+		max-width: 1400px;
+		margin: 0 auto;
+
+		.cima {
+			a {
+				text-decoration: none;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				max-height: 800px;
+				margin: 0;
+				margin-bottom: 20px;
+				.home-blog-belapedra {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					height: 200px;
+					width: 60%;
+					justify-content: center;
+
+					img {
+						width: 20px;
+						height: auto;
+						margin-bottom: 10px;
+					}
+					h3 {
+						font-size: 18px;
+						letter-spacing: 1px;
+						color: #8b8987;
+						font-weight: 500;
+						font-family: 'Ubuntu';
+						text-align: center;
+						width: 120px;
+						margin: 0 auto;
+					}
+				}
+
+				.img-blog-0 {
+					margin-left: 20px;
+				}
+
+				.img-blog-1 {
+					width: 60%;
+					img {
+						width: 100%;
+						height: 500px;
+					}
+				}
+			}
+
+			div:hover {
+				transform: scale(1.05);
+				transition: all 1s;
+				img {
+					border-radius: 50%;
+					transition: all 2s;
+				}
+			}
+		}
+
+		.baixo {
+			a {
+				display: flex;
+				text-decoration: none;
+				.img-blog-2 {
+					width: 400px;
+					img {
+						width: 100%;
+						height: 300px;
+					}
+				}
+
+				.img-blog-3 {
+					margin: 0 20px;
+					max-width: 470px;
+					img {
+						width: 100%;
+					}
+				}
+
+				.img-blog-4 {
+					max-width: 300px;
+					img {
+						width: 100%;
+						height: 200px;
+					}
+				}
+			}
+
+			div:hover {
+				transform: scale(1.05);
+				transition: all 1s;
+				img {
+					border-radius: 50%;
+					transition: all 3s;
+				}
 			}
 		}
 	}

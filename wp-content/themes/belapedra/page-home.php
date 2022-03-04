@@ -1,4 +1,5 @@
-<?php get_header();
+<?php
+get_header();
 
 $title = get_field('page_title');
 $description = get_field('description_test');
@@ -12,6 +13,9 @@ $tecnologiaDescricao = get_field('tecnologia_descricao');
 $tecnologiaImagem = get_field('tecnologia_imagem');
 $tecnologiaImagem = $tecnologiaImagem['url'];
 
+$imagensBlog = get_field('imagens_blog');
+// var_dump($imagensBlog[0]['url']);
+// die();
 ?>
 
 
@@ -23,7 +27,7 @@ $tecnologiaImagem = $tecnologiaImagem['url'];
          <h1> <?= $title ?> </h1>
       </div>
 
-      <div class="home-tecnologia">
+      <div class="container-tecnologia">
          <div class="tecnologia-interno" data-aos="zoom-in">
             <div class="tecnologia-texto" data-aos="zoom-in" data-aos-duration="1500">
                <?= $tecnologiaDescricao ?>
@@ -32,6 +36,45 @@ $tecnologiaImagem = $tecnologiaImagem['url'];
                <img src="<?= $tecnologiaImagem ?> ">
             </div>
          </div>
+      </div>
+
+      <div class="container-blog">
+
+         <div class="cima">
+            <a href="/blog">
+
+
+               <div class="home-blog-belapedra">
+                  <img src="/wp-content/themes/belapedra/assets/images/pencil.png">
+                  <h3>Blog da BELAPEDRA</h3>
+               </div>
+
+               <div class="img-blog-1">
+                  <img src="<?= $imagensBlog[3]['url'] ?>">
+               </div>
+
+               <div class="img-blog-0">
+                  <img src="<?= $imagensBlog[4]['url'] ?>">
+               </div>
+
+            </a>
+         </div>
+
+         <div class="baixo">
+            <a href="/blog">
+
+               <div class="img-blog-2">
+                  <img src="<?= $imagensBlog[2]['url'] ?>">
+               </div>
+               <div class="img-blog-3">
+                  <img src="<?= $imagensBlog[1]['url'] ?>">
+               </div>
+               <div class="img-blog-4">
+                  <img src="<?= $imagensBlog[0]['url'] ?>">
+               </div>
+         </div>
+
+         </a>
       </div>
 <?php
    endwhile;
