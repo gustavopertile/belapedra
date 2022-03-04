@@ -1161,12 +1161,39 @@ ol.commentlist ul {
 
 #page-home .container-blog .cima a .img-blog-0 {
   margin-left: 20px;
-  max-width: 740px;
+  min-width: 736px;
+  min-height: 700px;
+  max-width: 736px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: white;
 }
 
-#page-home .container-blog .cima a .img-blog-0 img {
-  width: 100%;
-  max-height: 700px;
+#page-home .container-blog .cima a .img-blog-0 h3 {
+  font-family: Raleway;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+#page-home .container-blog .cima a .img-blog-0 h1 {
+  max-width: 449px;
+  max-height: 234px;
+  font-size: 50px;
+  letter-spacing: 1px;
+  line-height: 60px;
+  font-family: Bebas Neue;
 }
 
 #page-home .container-blog .cima a .img-blog-1 {
@@ -1186,6 +1213,12 @@ ol.commentlist ul {
 }
 
 #page-home .container-blog .cima div:hover img {
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+#page-home .container-blog .cima .img-blog-0:hover {
   border-radius: 50%;
   -webkit-transition: all 2s;
   transition: all 2s;

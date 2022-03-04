@@ -14,8 +14,7 @@ $tecnologiaImagem = get_field('tecnologia_imagem');
 $tecnologiaImagem = $tecnologiaImagem['url'];
 
 $imagensBlog = get_field('imagens_blog');
-// var_dump($imagensBlog[0]['url']);
-// die();
+$descricaoBlog = get_field('descricao_blog');
 ?>
 
 
@@ -53,8 +52,8 @@ $imagensBlog = get_field('imagens_blog');
                   <img src="<?= $imagensBlog[3]['url'] ?>">
                </div>
 
-               <div class="img-blog-0">
-                  <img src="<?= $imagensBlog[4]['url'] ?>">
+               <div class="img-blog-0" style="background-image: url(<?= $imagensBlog[4]['url'] ?>)">
+                  <?= $descricaoBlog ?>
                </div>
 
             </a>
