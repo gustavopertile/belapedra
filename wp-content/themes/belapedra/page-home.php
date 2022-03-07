@@ -15,6 +15,10 @@ $tecnologiaImagem = $tecnologiaImagem['url'];
 
 $imagensBlog = get_field('imagens_blog');
 $descricaoBlog = get_field('descricao_blog');
+
+$informacoesBackground = get_field('background_informacoes');
+$informacoesBackground = $informacoesBackground['url'];
+$informacoesDescricao = get_field('informacoes_descricao');
 ?>
 
 
@@ -75,10 +79,34 @@ $descricaoBlog = get_field('descricao_blog');
 
          </a>
       </div>
-<?php
-   endwhile;
-   echo '</main>';
-endif;
+
+      <div class="container-informacoes" style="background-image: url(<?= $informacoesBackground ?>)">
+         <h1><?= $informacoesDescricao ?></h1>
+
+         <ul>
+            <?php
+            while (have_rows('informacoes')) : the_row();
+               $id = get_sub_field('id');
+               $titulo = get_sub_field('informacoes_titulo');
+               $imagem = get_sub_field('informacoes_imagem');
+               $imagem = $imagem['url'];
+               $hover = get_sub_field('informacoes_hover');
+            ?>
+
+               <li>
+                  <img src='<?= $imagem ?>'>
+                  <h3><?= $titulo ?></h3>
+                  <p><?= $hover ?></p>
+               </li>
+
+      <?php
+            endwhile;
+            echo '</ul>';
+            echo '</div>';
+
+         endwhile;
+         echo '</main>';
+      endif;
 
 
-get_footer(); ?>
+      get_footer(); ?>

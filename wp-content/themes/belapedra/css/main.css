@@ -1270,4 +1270,90 @@ ol.commentlist ul {
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
 }
+
+#page-home .container-informacoes {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#page-home .container-informacoes h1 {
+  width: 640px;
+  font-size: 45px;
+  line-height: 50px;
+  color: #ffffff;
+  font-family: 'Bebas Neue';
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+#page-home .container-informacoes ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+#page-home .container-informacoes ul li {
+  width: 300px;
+  height: 270px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+#page-home .container-informacoes ul li img {
+  height: 25%;
+  width: auto;
+}
+
+#page-home .container-informacoes ul h3 {
+  font-size: 24px;
+  line-height: 50px;
+  color: #fef2d9;
+  font-family: 'Bebas Neue';
+  text-align: center;
+  margin: auto;
+}
+
+#page-home .container-informacoes ul p {
+  display: none;
+}
+
+#page-home .container-informacoes ul li:hover {
+  background: rgba(0, 0, 0, 0.393995);
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+#page-home .container-informacoes ul li:hover p {
+  color: white;
+  max-width: 256px;
+  font-size: 14px;
+  margin: 0 auto;
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1056,4 +1056,68 @@ ol.commentlist {
 			}
 		}
 	}
+
+	.container-informacoes {
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-direction: column;
+		h1 {
+			width: 640px;
+			font-size: 45px;
+			line-height: 50px;
+			color: #ffffff;
+			font-family: 'Bebas Neue';
+			text-align: center;
+			margin: 0 auto 20px;
+		}
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+			padding: 0;
+			align-items: baseline;
+			flex-wrap: wrap;
+			max-width: 1200px;
+			li {
+				width: 300px;
+				height: 270px;
+				padding: 20px;
+				margin: 20px;
+				text-align: center;
+				img {
+					height: 25%;
+					width: auto;
+				}
+			}
+			h3 {
+				font-size: 24px;
+				line-height: 50px;
+				color: #fef2d9;
+				font-family: 'Bebas Neue';
+				text-align: center;
+				margin: auto;
+			}
+
+			p {
+				display: none;
+			}
+
+			li:hover {
+				background: rgba(0, 0, 0, 0.39399509803921573);
+				transition: all 1.5s;
+				p {
+					color: white;
+					max-width: 256px;
+					font-size: 14px;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+		}
+	}
 }
